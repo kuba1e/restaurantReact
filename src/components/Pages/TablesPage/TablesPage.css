@@ -1,0 +1,17 @@
+.tables__inner {
+  padding: 20px 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.items-control {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.filter__control {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
