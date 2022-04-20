@@ -20,7 +20,7 @@ const DishItemRecord = ()=>{
 
 
 export const DishItem = ({item, ...props}) => {
-  const loading = useSelector(({ tables: { loading } }) => loading);
+  const loading = useSelector(({ dishes: { loading } }) => loading);
   const dispatch = useDispatch();
 
   const leftBtnHandler = (e) => {

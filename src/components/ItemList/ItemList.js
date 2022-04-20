@@ -1,10 +1,10 @@
 import React from "react";
-import './ItemList.css'
+import "./ItemList.css";
 
-const ItemList = ({ items, ItemComponent }) => {
+const ItemList = ({ preparedData, ItemComponent }) => {
   return (
     <ul className="items-list">
-      {items.map((item) => {
+      {preparedData.map((item) => {
         return (
           <li key={item.id}>
             <ItemComponent item={item} />

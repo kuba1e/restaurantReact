@@ -16,11 +16,11 @@ const appData = {
   ],
   dishesOptions: [
     [
-      { id: 1, value: "ukraine", label: "Ukraine" },
-      { id: 2, value: "italy", label: "Italy" },
-      { id: 3, value: "georgia", label: "Georgia" },
-      { id: 4, value: "mexican ", label: "Mexican" },
-      { id: 5, value: "eastern", label: "Eastern" },
+      { id: 1, value: "Ukraine", label: "Ukraine" },
+      { id: 2, value: "Italy", label: "Italy" },
+      { id: 3, value: "Georgia", label: "Georgia" },
+      { id: 4, value: "Mexican ", label: "Mexican" },
+      { id: 5, value: "Eastern", label: "Eastern" },
     ],
     [
       { id: 1, value: "main dishes", label: "main dishes" },
@@ -41,6 +41,24 @@ const appData = {
     select: [
       { label: "Country", name: "country" },
       { label: "Type", name: "type" },
+    ],
+    textInput: { label: "Search", name: "searchItem" },
+  },
+  waitersOptions: [
+    [
+      { id: 1, value: "SuperUser", label: "SuperUser" },
+      { id: 2, value: "User", label: "User" },
+    ],
+    [
+      { id: 1, value: "Waiter", label: "Waiter" },
+      { id: 2, value: "Waiter", label: "Waiter" },
+      { id: 3, value: "Waiter", label: "Waiter" },
+    ],
+  ],
+  waitersLabels: {
+    select: [
+      { label: "Position", name: "Position" },
+      { label: "App Role", name: "App Role" },
     ],
     textInput: { label: "Search", name: "searchItem" },
   },

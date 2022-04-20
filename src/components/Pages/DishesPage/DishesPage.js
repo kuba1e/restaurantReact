@@ -8,6 +8,7 @@ import {
   fetchDishes,
 } from "../../../features/dishes/dishesSlice";
 import DishForm from "../../AddForm/DishForm";
+import DishItemList from "../../ItemList/DishItemList/DishItemList";
 import AppContext from "../../../AppContext";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -26,7 +27,7 @@ export const DishesPage = () => {
     dispatch(fetchDishes());
   }, [dispatch]);
 
-  const {dishesOptions, dishesLabels} = useContext(AppContext)
+  const { dishesOptions, dishesLabels } = useContext(AppContext);
 
   const form = isFormActive ? <DishForm /> : null;
 
@@ -69,8 +70,8 @@ export const DishesPage = () => {
 
   const onToggleForm = () => dispatch(setActiveForm());
   const onSelectChange = [
-    (value) => dispatch(setFilterValueType(value)),
     (value) => dispatch(setFilterValueCountry(value)),
+    (value) => dispatch(setFilterValueType(value)),
   ];
   const onTextChange = (value) => dispatch(setSearchValue(value));
 
@@ -82,7 +83,9 @@ export const DishesPage = () => {
       onTextChange={onTextChange}
       preparedData={preparedData}
       options={dishesOptions}
-      labelsObj ={dishesLabels}
-    />
+      labelsObj={dishesLabels}
+    >
+      {DishItemList().props.children}
+    </Page>
   );
 };

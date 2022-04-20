@@ -11,7 +11,7 @@ const Item = (props) => {
     leftBtnHandler,
     rightBtnHandler,
   } = props
-const { img = noImg, sitsQuantity, location, description, tableNumber } = item
+const { img = noImg } = item
   const btnGroup = hover ? (
     <ButtonsControl
       leftBtn={<i className="fa-solid fa-pen-to-square"></i>}
@@ -48,21 +48,3 @@ const { img = noImg, sitsQuantity, location, description, tableNumber } = item
 };
 
 export default Item;
-/*
-<div className="list__item-subtitle">
-<h6 className="list__item-subtitle-text">Table num: {tableNumber}</h6>
-</div>
-<div className="list__item-subtitle">
-<h6 className="list__item-subtitle-text">
-  Sits quantity: {sitsQuantity}
-</h6>
-</div>
-<div className="list__item-subtitle">
-<h6 className="list__item-subtitle-text">Location: {location}</h6>
-</div>
-<div className="list__item-subtitle">
-<h6 className="list__item-subtitle-text">
-  Description: {description}
-</h6>
-</div>
-*/

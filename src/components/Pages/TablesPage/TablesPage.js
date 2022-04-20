@@ -86,7 +86,7 @@ const TablesPage = (props) => {
       options={tableOptions}
       labelsObj = {tableLabels}
     >
-      <TableItemList/>
+      {TableItemList().props.children}
     </Page>
   );
 };

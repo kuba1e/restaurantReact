@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 
 import ButtonsControl from "../ButtonsControl";
 import Select from "../Inputs/Select";
@@ -13,7 +13,7 @@ const Page = ({
   preparedData,
   options,
   labelsObj: { select, textInput },
-  children
+  children,
 }) => {
   return (
     <section className="section">
@@ -44,8 +44,9 @@ const Page = ({
             onChange={({ target: { value } }) => onTextChange(value)}
           />
         </div>
-        {console.log(children)}
-        <TableItemList items={preparedData} />
+        {Children.map(children, (child) => {
+          return React.cloneElement(child, { preparedData });
+        })}
       </div>
     </section>
   );
